@@ -124,7 +124,7 @@ RegisterNetEvent('qb-multicharacter:server:createCharacter', function(data)
     for i = 1, #rows do
         used[rows[i].cid] = true
     end
-    local cid = 0
+    local cid = 1
     while used[cid] do
         cid = cid + 1
     end
