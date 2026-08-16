@@ -1,0 +1,197 @@
+.character-select {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(14vh);
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.character-select button {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+/* Header */
+
+.select-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.select-subtitle {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.select-title {
+  margin: 0;
+  font-size: 46px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  line-height: 1.05;
+  text-transform: uppercase;
+  color: var(--text);
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.55);
+}
+
+.select-subtext {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Delete button */
+
+.delete-btn {
+  position: fixed;
+  top: 26px;
+  right: 34px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(45, 47, 52, 0.85);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 9px 16px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: color 0.12s ease, background 0.12s ease, border-color 0.12s ease;
+}
+
+.delete-btn:hover:not(:disabled) {
+  color: var(--danger);
+  border-color: var(--danger);
+}
+
+.delete-btn.confirming {
+  color: var(--danger);
+  border-color: var(--danger);
+  background: rgba(229, 72, 77, 0.12);
+}
+
+.delete-btn.locked {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+/* Slot navigation */
+
+.slot-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 38px;
+  min-height: 116px;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+  background: rgba(29, 30, 34, 0.88);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 8px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+.slot-btn {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--muted);
+  transition: color 0.12s ease, border-color 0.12s ease, transform 0.12s ease;
+}
+
+.slot-btn:hover {
+  color: var(--text);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.slot-btn.active {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.slot-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+  transition: opacity 0.15s ease;
+}
+
+.slot-indicator.hidden {
+  opacity: 0;
+}
+
+.slot-indicator.visible {
+  opacity: 1;
+}
+
+.indicator-label {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: var(--accent);
+}
+
+.indicator-bar {
+  width: 30px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--accent);
+  box-shadow: 0 0 10px rgba(255, 88, 0, 0.6);
+}
+
+/* Primary CTA */
+
+.create-btn {
+  margin-top: 22px;
+  min-width: 420px;
+  padding: 18px 32px;
+  background: var(--accent);
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--text);
+  box-shadow: 0 10px 30px rgba(255, 88, 0, 0.35);
+  transition: background 0.12s ease, transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.create-btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 14px 36px rgba(255, 88, 0, 0.45);
+}
+
+.create-btn:active {
+  transform: translateY(0);
+}
